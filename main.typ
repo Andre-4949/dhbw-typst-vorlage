@@ -1,7 +1,7 @@
 // Import configuration files
 #import "config/functions.typ": *
 #include "config/config.typ"
-
+#import "config/acronyms.typ" : acro
 // Define a function to create headers
 
 // Front matter

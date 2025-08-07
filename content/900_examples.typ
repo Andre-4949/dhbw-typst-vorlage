@@ -1,3 +1,4 @@
+#import "../config/acronyms.typ": *
 // Examples (can be removed)
 = Beispiele
 
@@ -13,8 +14,11 @@ Beispiel Homepage @urlId
   caption: "DHBW Logo"
 )
 
-== Fußnote und Abkürzung
-Fußnote#footnote[Fußnote], DHBW
+== Fußnote
+Fußnote#footnote[Fußnote]
+
+== Abkürzung
+Die #acro("DHBW") wird bei der ersten Erwähnung ausgeschrieben und danach immer als #acro("DHBW") verwendet.
 
 == Tabelle
 #figure(

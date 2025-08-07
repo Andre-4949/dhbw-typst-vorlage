@@ -1,4 +1,6 @@
 #import "constants.typ": *
+#import "acronyms.typ": *
+
 #let insertCoverText = {
   align(center)[
     #text(size: 18pt, weight: "bold")[
@@ -128,8 +130,9 @@
 
 #let insertAcronyms = {
   // Abbreviations
+  pagebreak()
   heading(outlined: true)[Abkürzungsverzeichnis]
-  [DHBW: Dualen Hochschule Baden-Württemberg]
-  v(1fr)
+  v(1em)
+  printAcronyms
   create_footer()
 }
