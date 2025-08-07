@@ -43,4 +43,5 @@
   footer: context create_footer(),
   numbering: "1"
 )
+#set heading(numbering: "1.1.1", outlined: true)
 #include "content/999_chapters.typ"
