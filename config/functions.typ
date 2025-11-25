@@ -134,5 +134,7 @@
   heading(outlined: true)[Abkürzungsverzeichnis]
   v(1em)
   printAcronyms
+  v(1fr)
   create_footer()
 }
+

@@ -1,4 +1,5 @@
 #import "../config/acronyms.typ": *
+#include "../config/config.typ"
 // Examples (can be removed)
 = Beispiele
 
@@ -9,11 +10,29 @@ Beispiel Text @testBuch1[S. 10]
 Beispiel Homepage @urlId
 
 == Bilder
+
+
+
+#figure(
+  image("../resources/logo-dhbw.png", width: 30%),
+  caption: "DHBW Logo"
+) <abbildung>
+
+
+Siehe #ref(<abbildung>) für das DHBW‑Logo.
 #figure(
   image("../resources/logo-dhbw.png", width: 30%),
   caption: "DHBW Logo"
 )
-
+#figure(
+  image("../resources/logo-dhbw.png", width: 30%),
+  caption: "DHBW Logo"
+) <abbildung2>
+Siehe #ref(<abbildung2>) für das DHBW‑Logo.
+#figure(
+  image("../resources/logo-dhbw.png", width: 30%),
+  caption: "DHBW Logo"
+)
 == Fußnote
 Fußnote#footnote[Fußnote]
 

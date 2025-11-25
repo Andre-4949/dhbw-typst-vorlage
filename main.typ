@@ -44,4 +44,17 @@
   numbering: "1"
 )
 #set heading(numbering: "1.1.1", outlined: true)
+
+#show figure.caption: it => [
+  Abbildung #context it.counter.display(it.numbering): #it.body
+]
+
+#show ref: it => {
+  if it.element != none and it.element.func() == figure {
+    [Abbildung #it.element.counter.display(it.element.numbering)]
+  } else {
+    it
+  }
+}
+
 #include "content/999_chapters.typ"
