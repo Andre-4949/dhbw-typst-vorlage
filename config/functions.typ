@@ -85,47 +85,37 @@
 
 #let insertBibliography = {
   // Bibliography
-  create_header()
   bibliography("../resources/quellen.bib", title: "Literaturverzeichnis", style: "ieee")
   v(1fr)
-  create_footer()
 }
 
 #let insertListOfFigures = {
   // List of figures
   pagebreak()
-  create_header()
   outline(title: "Abbildungsverzeichnis", target: figure.where(kind: image))
   v(1fr)
-  create_footer()
 }
 
 #let insertListOfTables = {
   // List of tables
   pagebreak()
-  create_header()
   outline(title: "Tabellenverzeichnis", target: figure.where(kind: table))
   v(1fr)
-  create_footer()
 }
 
 #let insertListOfScripts = {
   // List of code listings
   pagebreak()
-  create_header()
   outline(title: "Skriptverzeichnis", target: figure.where(kind: raw))
   v(1fr)
-  create_footer()
 }
 
 #let insertAppendix = {
 // Appendix
   pagebreak()
-  create_header()
   heading(numbering: "A")[Anhang]
   include "../content/999_appendix.typ"
   v(1fr)
-  create_footer()
 }
 
 #let insertAcronyms = {
@@ -135,6 +125,5 @@
   v(1em)
   printAcronyms
   v(1fr)
-  create_footer()
 }
 

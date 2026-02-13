@@ -22,6 +22,12 @@
   insertAcronyms
   
   // Insert main content
+  set page(
+    margin: (top: 4cm, bottom: 4cm, left: 2.5cm, right: 2.5cm), 
+    header: create_header(),
+    footer: context create_footer(),
+    numbering: "1"
+  )
   doc
   
   insertBibliography
@@ -37,24 +43,11 @@
 
 // Main content
 
-#set page(
-  margin: (top: 4cm, bottom: 4cm, left: 2.5cm, right: 2.5cm), 
-  header: create_header(),
-  footer: context create_footer(),
-  numbering: "1"
-)
+
 #set heading(numbering: "1.1.1", outlined: true)
 
-#show figure.caption: it => [
-  Abbildung #context it.counter.display(it.numbering): #it.body
-]
-
-#show ref: it => {
-  if it.element != none and it.element.func() == figure {
-    [Abbildung #it.element.counter.display(it.element.numbering)]
-  } else {
-    it
-  }
-}
+#set figure.caption(separator: [: ])
+#show figure.where(kind: table): set figure(supplement: [Tabelle])
+#show figure.where(kind: image): set figure(supplement: [Abbildung])
 
 #include "content/999_chapters.typ"
